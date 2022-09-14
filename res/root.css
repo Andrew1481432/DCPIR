@@ -1,0 +1,624 @@
+html,body
+{
+    height: 100%;
+}
+body
+{
+    line-height: 150%;
+    position: relative;
+    width: 100%;
+}
+body.showWindow
+{
+    overflow: hidden;
+    position: fixed;
+}
+a
+{
+    color: #5bbd72;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+::selection
+{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    opacity: 1;
+}
+::-moz-selection
+{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    opacity: 1;
+}
+.wrapper
+{
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 20px 10px;
+    position: relative;
+}
+.myInput
+{
+    border-bottom: 3px solid #d8d8d8;
+    height: 40px;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    padding: 0 12px;
+    transition: all 100ms linear;
+    webkit-transition: all 100ms linear;
+    width: 100%;
+}
+.myInput:focus
+{
+    border-color: #5bbd72;
+}
+.myInput.err
+{
+    border-color: #ff695e!important;
+}
+.myInput::-webkit-input-placeholder
+{
+    color: #b8b8b8;
+}
+.myInput:-moz-placeholder
+{
+    color: #b8b8b8;
+    opacity: 1;
+}
+.myInput::-moz-placeholder
+{
+    color: #b8b8b8;
+    opacity: 1;
+}
+.myInput:-ms-input-placeholder
+{
+    color: #b8b8b8;
+}
+.button
+{
+    background: #5bbd72;
+    box-sizing: border-box;
+    color: #fff!important;
+    cursor: pointer;
+    display: inline-block;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    overflow: hidden;
+    padding: 8px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none!important;
+    transition: all 100ms linear;
+    webkit-transition: all 100ms linear;
+}
+.button:hover
+{
+    background: #66d17f;
+}
+.loader
+{
+    pointer-events: none;
+    position: relative;
+}
+.loader:before,.loader:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+.loader:before
+{
+    background: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.loader:after
+{
+    animation: loader 1s linear infinite;
+    border: 2px solid;
+    border-color: #fff #fff #fff transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 26px;
+    khtml-border-radius: 50%;
+    left: 50%;
+    margin: -13px 0 0 -13px;
+    moz-animation: loader 1s linear infinite;
+    moz-border-radius: 50%;
+    ms-animation: loader 1s linear infinite;
+    o-animation: loader 1s linear infinite;
+    top: 50%;
+    webkit-animation: loader 1s linear infinite;
+    webkit-border-radius: 50%;
+    width: 26px;
+}
+.ender:after,.starter:before
+{
+    clear: both;
+    content: '';
+    display: block;
+}
+.background
+{
+    background: no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    moz-background-size: cover;
+    o-background-size: cover;
+    position: absolute;
+    top: 0;
+    webkit-background-size: cover;
+    width: 100%;
+    z-index: -1;
+}
+header
+{
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    height: 100%;
+    min-height: 320px;
+    position: relative;
+}
+.rulesList>div
+{
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.rulesList>ul li:nth-child(n+2)
+{
+    margin-top: 20px;
+}
+.rulesList>ul span
+{
+    display: block;
+    font-size: 130%;
+}
+.tutorial
+{
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.tutorial:hover:before
+{
+    background: #000;
+}
+.tutorial:hover:after
+{
+    color: #fff;
+    transform: scale(1.2,1.2);
+}
+.tutorial:after
+{
+    opacity: .9;
+}
+.tutorial:before
+{
+    box-sizing: border-box;
+    opacity: .8;
+}
+.tutorial:after,.tutorial:before
+{
+    content: '';
+    cursor: pointer;
+    display: block;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    position: absolute;
+    transition: all 100ms linear;
+    webkit-transition: all 100ms linear;
+}
+.tutorial:before
+{
+    background: rgba(0,0,0,.7);
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.tutorial:after
+{
+    color: #fff;
+    content: "\f04b";
+    font-family: 'Icons';
+    font-size: 70px;
+    height: 70px;
+    left: 50%;
+    line-height: 70px;
+    margin-left: -35px;
+    margin-top: -35px;
+    text-align: center;
+    top: 50%;
+    width: 70px;
+}
+.tutorial img
+{
+    display: block;
+    margin: -50px 0;
+    width: 100%;
+}
+.footerVk
+{
+    margin-top: 40px;
+}
+.footerInfoUl:nth-child(n+2)
+{
+    margin-top: 40px;
+}
+.footerInfoUl li
+{
+    word-wrap: break-word;
+}
+.footerInfoUl li:first-child
+{
+    font-size: 130%;
+}
+.footerCopy>span
+{
+    display: block;
+    margin-top: 40px;
+}
+.footerCopy>span a
+{
+    text-transform: uppercase;
+}
+.footerCopy:first-child>span
+{
+    margin-top: 0;
+}
+.windowPre
+{
+    background: rgba(0,0,0,.7);
+    display: none;
+    height: 100%;
+    left: 0;
+    moz-transition: all 300ms linear;
+    ms-transition: all 300ms linear;
+    opacity: 0;
+    o-transition: all 300ms linear;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    transition: all 300ms linear;
+    webkit-transition: all 300ms linear;
+    width: 100%;
+    z-index: 999;
+}
+.windowPre>.windowClose
+{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.windowThis
+{
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-sizing: border-box;
+    margin: 0 auto;
+    min-height: 100%;
+    min-width: 100%;
+    moz-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    overflow: hidden;
+    position: relative;
+    wekbit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.windowThis .myInput
+{
+    margin-top: 10px;
+}
+.windowThis .myInput:first-of-type
+{
+    margin-top: 0;
+}
+.windowTitle span
+{
+    display: block;
+    font-size: 60%;
+}
+.windowTitle
+{
+    font-size: 160%;
+    margin: 20px 20px 60px;
+    overflow: hidden;
+    text-align: center;
+}
+.windowText
+{
+    padding: 0 20px;
+    position: relative;
+    word-wrap: break-word;
+}
+.windowTutorial iframe
+{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.windowTutorial
+{
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.windowButtons,.windowText>.windowClose
+{
+    display: block;
+    margin: 20px 0;
+}
+.windowButtons>.button
+{
+    float: left;
+    width: 50%;
+}
+.windowClose.button
+{
+    background: #d0d0d0!important;
+}
+.windowClose.button:hover
+{
+    background: #ddd!important;
+}
+.windowAnswer
+{
+    background: #5bbd72;
+    color: #fff;
+    margin: 20px 0 -20px;
+    padding: 40px;
+    text-align: center;
+}
+.windowAnswer span
+{
+    display: block;
+    font-size: 110%;
+    margin: 20px 0 10px;
+}
+.windowAnswer i
+{
+    background: #fff;
+    border-radius: 3px;
+    color: #5bbd72;
+    display: inline-block;
+    font-size: 20px;
+    height: 50px;
+    khtml-border-radius: 3px;
+    line-height: 50px;
+    moz-border-radius: 3px;
+    webkit-border-radius: 3px;
+    width: 50px;
+}
+.windowAnswer.answerError
+{
+    background: #ff695e;
+}
+.windowAnswer.answerError i
+{
+    color: #ff695e;
+}
+@-webkit-keyframes loader
+{
+    from
+    {
+        moz-transform: rotate(0deg);
+        ms-transform: rotate(0deg);
+        o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        webkit-transform: rotate(0deg);
+    }
+    to
+    {
+        moz-transform: rotate(360deg);
+        ms-transform: rotate(360deg);
+        o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        webkit-transform: rotate(360deg);
+    }
+}
+@-ms-keyframes loader
+{
+    from
+    {
+        moz-transform: rotate(0deg);
+        ms-transform: rotate(0deg);
+        o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        webkit-transform: rotate(0deg);
+    }
+    to
+    {
+        moz-transform: rotate(360deg);
+        ms-transform: rotate(360deg);
+        o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        webkit-transform: rotate(360deg);
+    }
+}
+@-o-keyframes loader
+{
+    from
+    {
+        moz-transform: rotate(0deg);
+        ms-transform: rotate(0deg);
+        o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        webkit-transform: rotate(0deg);
+    }
+    to
+    {
+        moz-transform: rotate(360deg);
+        ms-transform: rotate(360deg);
+        o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        webkit-transform: rotate(360deg);
+    }
+}
+@keyframes loader
+{
+    from
+    {
+        moz-transform: rotate(0deg);
+        ms-transform: rotate(0deg);
+        o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        webkit-transform: rotate(0deg);
+    }
+    to
+    {
+        moz-transform: rotate(360deg);
+        ms-transform: rotate(360deg);
+        o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        webkit-transform: rotate(360deg);
+    }
+}
+.blue a
+{
+    color: #54c8ff;
+}
+.blue .button
+{
+    background: #54c8ff;
+}
+.blue .myInput:focus
+{
+    border-color: #54c8ff;
+}
+.blue .button:hover
+{
+    background: #7bd5ff;
+}
+.orange a
+{
+    color: #ff851b;
+}
+.orange .button
+{
+    background: #ff851b;
+}
+.orange .myInput:focus
+{
+    border-color: #ff851b;
+}
+.orange .button:hover
+{
+    background: #ffa04e;
+}
+.purple a
+{
+    color: #b2aae8;
+}
+.purple .button
+{
+    background: #b2aae8;
+}
+.purple .myInput:focus
+{
+    border-color: #b2aae8;
+}
+.purple .button:hover
+{
+    background: #c3bcf2;
+}
+.pink a
+{
+    color: #ff8edf;
+}
+.pink .button
+{
+    background: #ff8edf;
+}
+.pink .myInput:focus
+{
+    border-color: #ff8edf;
+}
+.pink .button:hover
+{
+    background: #ffa9e7;
+}
+.red a
+{
+    color: #ff695e;
+}
+.red .button
+{
+    background: #ff695e;
+}
+.red .myInput:focus
+{
+    border-color: #ff695e;
+}
+.red .button:hover
+{
+    background: #ff8a81;
+}
+.teal a
+{
+    color: #54dada;
+}
+.teal .button
+{
+    background: #54dada;
+}
+.teal .myInput:focus
+{
+    border-color: #54dada;
+}
+.teal .button:hover
+{
+    background: #6ce5e5;
+}
+.black a
+{
+    color: #333;
+}
+.black .button
+{
+    background: #333;
+}
+.black .myInput:focus
+{
+    border-color: #333;
+}
+.black .button:hover
+{
+    background: #444;
+}
+.yellow a
+{
+    color: #f2c61f;
+}
+.yellow .button
+{
+    background: #f2c61f;
+}
+.yellow .myInput:focus
+{
+    border-color: #f2c61f;
+}
+.yellow .button:hover
+{
+    background: #ffdd5a;
+}
+.isIE .background
+{
+    background-attachment: scroll;
+}

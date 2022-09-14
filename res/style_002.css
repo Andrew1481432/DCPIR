@@ -1,0 +1,340 @@
+body
+{
+    background-image: url('./back.jpg');
+    color: #555;
+    font-family: 'Roboto Condensed',Arial,sans-serif;
+    font-size: 15px;
+}
+a
+{
+    border-bottom: 1px solid;
+}
+a:hover
+{
+    border: 0;
+    text-decoration: none;
+}
+header:after
+{
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    opacity: .075;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.headerText
+{
+    box-sizing: border-box;
+    left: 50%;
+    moz-transform: translate(-50%,-50%);
+    ms-transform: translate(-50%,-50%);
+    o-transform: translate(-50%,-50%);
+    padding: 0 10px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    webkit-transform: translate(-50%,-50%);
+    width: 100%;
+    word-wrap: break-word;
+}
+.headerText strong
+{
+    display: block;
+    font-size: 23px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.headerIp
+{
+    text-transform: uppercase;
+}
+.together
+{
+    border-collapse: separate;
+    display: table;
+    height: 40px;
+    left: 50%;
+    max-width: 425px;
+    moz-transform: translate(-50%);
+    ms-transform: translate(-50%);
+    o-transform: translate(-50%);
+    position: relative;
+    top: 20px;
+    transform: translate(-50%);
+    webkit-transform: translate(-50%);
+    width: 100%;
+}
+.together>div
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+.together .button
+{
+    padding-left: 30px;
+    padding-right: 30px;
+    white-space: nowrap;
+}
+.mySelect
+{
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    position: relative;
+    transition: all 100ms linear;
+    webkit-transition: all 100ms linear;
+    width: 100%;
+}
+.mySelect.err
+{
+    border-color: #ff695e;
+}
+.mySelect:hover,.mySelect.sel
+{
+    background: #fff;
+    color: #555;
+}
+.mySelect:hover:after
+{
+    color: #555;
+}
+.mySelectText
+{
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mySelect.sel .mySelectList
+{
+    display: block;
+}
+.mySelectList
+{
+    background: #fff;
+    border: 1px solid #fff;
+    border-top: 0;
+    color: #555;
+    display: none;
+    left: -1px;
+    line-height: 100%;
+    max-height: 200px;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    overflow: auto;
+    position: absolute;
+    top: 39px;
+    transition: all 100ms linear;
+    webkit-transition: all 100ms linear;
+    width: 100%;
+    z-index: 90;
+}
+.mySelectList::-webkit-scrollbar
+{
+    width: 5px;
+}
+.mySelectList::-webkit-scrollbar-thumb
+{
+    background-color: #b8b8b8;
+}
+.mySelectList::-webkit-scrollbar-thumb:hover
+{
+    background-color: #777;
+}
+.mySelectList::-webkit-scrollbar-track
+{
+    border-width: 0;
+}
+.mySelectList::-webkit-scrollbar-track:hover
+{
+    background-color: #eee;
+}
+.mySelectList span
+{
+    display: block;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    overflow: hidden;
+    padding: 7px 10px;
+    text-overflow: ellipsis;
+    transition: all 100ms linear;
+    webkit-transition: all 100ms linear;
+    white-space: nowrap;
+}
+.mySelectList span:hover
+{
+    background: #f8f8f8;
+}
+.mySelectList span:after
+{
+    color: #aaa;
+    content: attr(data-cost);
+    display: block;
+    font-size: 80%;
+}
+.headerButton
+{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    bottom: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    height: 40px;
+    khtml-border-radius: 50%;
+    left: 50%;
+    line-height: 40px;
+    margin-left: -20px;
+    moz-border-radius: 50%;
+    moz-transition: all 100ms linear;
+    ms-transition: all 100ms linear;
+    o-transition: all 100ms linear;
+    position: absolute;
+    transition: all 100ms linear;
+    webkit-border-radius: 50%;
+    webkit-transition: all 100ms linear;
+    width: 40px;
+}
+.headerButton:hover
+{
+    background: #fff!important;
+    border-color: #fff;
+    color: #555!important;
+}
+nav
+{
+    box-sizing: border-box;
+    padding: 0 10px;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+nav a
+{
+    color: inherit!important;
+    display: inline-block;
+    margin: 0 5px;
+}
+.progress
+{
+    background: #fff;
+    height: 5px;
+    moz-transition: all 1s;
+    ms-transition: all 1s;
+    o-transition: all 1s;
+    transition: all 1s;
+    webkit-transition: all 1s;
+    width: 0;
+}
+.progress.loading
+{
+    animation: progressBarInit 1s linear infinite;
+    moz-animation: progressBarInit 1s linear infinite;
+    ms-animation: progressBarInit 1s linear infinite;
+    o-animation: progressBarInit 1s linear infinite;
+    position: relative;
+    webkit-animation: progressBarInit 1s linear infinite;
+    width: 30%;
+}
+@-webkit-keyframes progressBarInit
+{
+    from
+    {
+        left: -30%;
+    }
+    to
+    {
+        left: 100%;
+    }
+}
+@-moz-keyframes progressBarInit
+{
+    from
+    {
+        left: -30%;
+    }
+    to
+    {
+        left: 100%;
+    }
+}
+@-ms-keyframes progressBarInit
+{
+    from
+    {
+        left: -30%;
+    }
+    to
+    {
+        left: 100%;
+    }
+}
+@-o-keyframes progressBarInit
+{
+    from
+    {
+        left: -30%;
+    }
+    to
+    {
+        left: 100%;
+    }
+}
+@keyframes progressBarInit
+{
+    from
+    {
+        left: -30%;
+    }
+    to
+    {
+        left: 100%;
+    }
+}
+noindex:-o-prefocus,#background-output
+{
+    display: none;
+}
+article
+{
+    background: #fff;
+    position: relative;
+    z-index: 3;
+}
+footer
+{
+    color: #fff;
+}
+@media screen and (min-width:740px)
+{
+    nav
+    {
+        padding: 0 30px;
+        top: 30px;
+    }
+    .headerButton
+    {
+        bottom: 40px;
+        height: 60px;
+        line-height: 60px;
+        margin-left: -30px;
+        width: 60px;
+    }
+    .headerText strong
+    {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+}
