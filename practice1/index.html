@@ -1,0 +1,100 @@
+<!-- Тег DOCTYPE — ключевой компонент web-страниц, претендующих на соответствие стандартам: без него ваш код и CSS не пройдут проверку валидатором. -->
+<!DOCTYPE html>
+<!-- Тег <html> является контейнером, который заключает в себе все содержимое веб-страницы -->
+<html lang="en">
+<!-- Тег <head> предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными. -->
+<head>
+    <!-- Указывает кодировку документа.  -->
+    <meta charset="UTF-8">
+    <!-- Сообщает браузеру о том, как именно обрабатывать размеры страницы, и изменять её масштаб. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Определяет заголовок документа. -->
+    <title>Главная | MobileMonster</title>
+    <!-- Подключаем фавикон -->
+    <link rel="icon" type="image/png" href="img/fav.png">
+</head>
+<!-- Элемент <body> предназначен для хранения содержания веб-страницы (контента) -->
+<body>
+    <!-- Задает «шапку» сайта или раздела, в которой обычно располагается заголовок. -->
+    <header>
+        <!-- Заголовок в который вложена ссылка -->
+        <h1><a id="mainheader"  href="#subHeader">Смартфоны для молодёжи!</a></h1>
+
+        <p>Почему следует покупать телефоны именно у нас?</p>
+        <ol>
+            <li>У нас дешево</li>
+            <ul>
+                <li>Отличные скидки</li>
+                <li>Кешбек при покупке</li>
+                <li>Есть tradein</li>
+            </ul>
+            <li>Низкие цены</li>
+            <li>У нас отличные консультанты</li>
+        </ol>
+
+    </header>
+
+    <div style="text-align: center">
+<pre>
+    ___________________________
+    &lt; Привествую, пользователь интернет магазина <i>Mobile Monster</i> &gt;
+    ---------------------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+</pre>
+        <!-- Форматируем текст тегами из таблицы 1.2 и 1.3 -->
+        <p><b>Самый</b> <strong>дружелюбный</strong> магазин гаджетов <i>Mobile Monster</i>.<br> Продажа <em>мобильных устройств</em>, <u>деайсов</u> <sub>и</sub> аксессуаров <sup>по</sup> самым низким ценам.</p>
+        <blockquote cite="https://biggeek.ru/">
+            <p>Этот слоган взят с BigGeek.</p>
+        </blockquote>
+
+
+        <!-- Список описаний -->
+        <dl>
+            <dt>Использование <abbr title="HyperText Markup Language">HTML</abbr></dt>
+            <dd> Весело и легко!</dd>
+
+            <dt>Используя <abbr title="Cascading Style Sheets">CSS</abbr></dt>
+            <dd> Вы можете стилизовать аббревиатуры!</dd>
+
+            <dt>Термин 3</dt>
+            <dd>Описание термина 3</dd>
+
+            <dt>Термин 4</dt>
+            <dd>Описание термина 4</dd>
+
+            <dt>Термин 5</dt>
+            <dd>Описание термина 5</dd>
+        </dl>
+
+
+        <!-- Изображение-ссылка на внешний ресурс -->
+        <figure>
+            <a href="https://apple.com"><img src="img/img_iphone.png" width="100"
+                                       height="100" alt="Iphone 14 pro"></a>
+            <figcaption>Iphone 14 PRO</figcaption>
+        </figure>
+
+        <!-- Изображение-карта с тремя областями-ссылками -->
+        <img src="img/img_idiocratic.jpeg" usemap="#shapes">
+        <map name="shapes">
+            <area shape="circle" coords="232,145,10" href="https://www.kinopoisk.ru/film/77720/">
+            <area shape="rect" coords="263,140,286,180" href="https://www.kinopoisk.ru/film/77720/">
+            <area shape="poly" coords="161,112,177,105,179,118" href="https://www.kinopoisk.ru/film/77720/">
+        </map>
+
+        <footer>
+            <!-- Подзаголовок -->
+            <h2><a id="subHeader"  href="#mainheader">Смартфоны для молодёжи!</a></h2>
+
+            <!-- Ссылки -->
+            <a href="https://testerdev.ru">Ссылка на внешний ресурс</a>
+            <a href="tel:88005553535">Позвонить по номеру</a>
+            <a href="mailto:88005553535@mail.ru">Ссылка на почтовый клиент</a>
+        </footer>
+    </div>
+</body>
+</html>
