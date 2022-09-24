@@ -1,0 +1,123 @@
+<!-- Тег DOCTYPE — ключевой компонент web-страниц, претендующих на соответствие стандартам: без него ваш код и CSS не пройдут проверку валидатором. -->
+<!DOCTYPE html>
+<!-- Тег <html> является контейнером, который заключает в себе все содержимое веб-страницы -->
+<html lang="en">
+<!-- Тег <head> предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными. -->
+<head>
+    <!-- Указывает кодировку документа.  -->
+    <meta charset="UTF-8">
+    <!-- Сообщает браузеру о том, как именно обрабатывать размеры страницы, и изменять её масштаб. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Определяет заголовок документа. -->
+    <title>Главная | MobileMonster</title>
+    <!-- Подключаем фавикон -->
+    <link rel="icon" type="image/png" href="assets/img/fav.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!-- Элемент <body> предназначен для хранения содержания веб-страницы (контента) -->
+<body>
+    <!-- Задает «шапку» сайта или раздела, в которой обычно располагается заголовок. -->
+    <header>
+        <!-- Заголовок в который вложена ссылка -->
+        <div class="logo">
+            <div class="logo_img">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" height="65" alt="Логотип"/>
+                </a>
+            </div>
+            <div class="logo_text">
+                <h1><a href="index.html">Смартфоны для молодёжи</a></h1>
+                <h2>Смартфоны - наша страсть!</h2>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="">О САЙТЕ</a></li>
+                <li><a href="">ДОСТАВКА</a></li>
+                <li><a href="">ДЛЯ СМИ И БЛОГЕРОВ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Применить тег <main> для разметки уникального контента на странице. -->
+    <main>
+        <!-- Создать области секций с помощью тега <section>, задать секциям заголовки. -->
+        <article>
+            <div style="text-align: center; margin-bottom: 20px">
+                <h2>БЛОГ</h2>
+            </div>
+            <section>
+                <hr>
+                <h2>
+                    <a href="#">iPhone 14 Pro на бумаге и в реальной жизни. Самый подробный обзор!</a>
+                </h2>
+                <div class="posts_content">
+                    <p>
+                        Apple продолжает традицию, поэтому в этом году iPhone 14 Pro и 14 Pro Max снова отличаются лишь размером экрана и батареи, что позволяет вам гораздо легче выбирать, а нам — снимать и рассказывать. Что пообещала Apple на презентации и как это всё работает в реальной жизни? Давайте разбираться.
+                    </p>
+                </div>
+                <p><a href="#">читать</a></p>
+            </section>
+
+            <section>
+                <hr>
+                <h2><a href="#">Что не так с «Динамическим островом» iPhone 14 Pro и почему он только мешает</a></h2>
+                <div class="posts_content">
+                    <p>
+                        После презентации iPhone 14 всё внимание общественности приковано к «Динамическому острову» — главной программной инновации Apple, которая сильно преображает использование смартфона и маскирует его двойной вырез под камеру с датчиками Face ID. Но пока большинство восторгается этим уникальным дизайнерским решением, нашлись и те, кому оно откровенно не нравится — по ряду объективных причин.
+                    </p>
+                </div>
+                <p><a href="#">читать</a></p>
+            </section>
+        </article>
+        <aside>
+            <div style="text-align: center; margin-bottom: 20px">
+                <h2>ВИДОСИКИ</h2>
+            </div>
+
+            <ul class="video-index__list">
+                <li class="item-video-index">
+                    <img class="item-video-index__image" src="https://images.biggeek.ru/blog/preview_iPHONE14PRO" alt="Это — iPhone 14. НЕ ПОКУПАЙ его">
+                    <h3 class="item-video-index__title">
+                        <a class="item-video-index__link" href="https://www.youtube.com/embed/_kvODN6tVv8?autoplay=1">iPhone 14 Pro на бумаге и в жизни. Самый подробный обзор!</a>
+                    </h3>
+                </li>
+
+                <li class="video-index__item item-video-index">
+                    <img class="item-video-index__image" src="https://images.biggeek.ru/blog/preview_iPHONE14REVIEW2" alt="Это — iPhone 14. НЕ ПОКУПАЙ его">
+
+                    <h3 class="item-video-index__title">
+                        <a class="item-video-index__link" href="https://www.youtube.com/embed/GUNYD1l7z4M?autoplay=1">Это — iPhone 14. НЕ ПОКУПАЙ его</a>
+                    </h3>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <p>Всегда на связи</p>
+            <address class="url_footer_owner">
+                For more details, contact
+                <a class="url_footer_owner" href="mailto:88005553535@mail.ru">John Smith</a>.
+            </address>
+
+            <ul class="phones-footer">
+                <li class="phones-footer__item">
+                    <a class="phones-footer__link" href="tel:+74951804130">8 (495) 180 · 41 · 30</a>
+                </li>
+
+                <li class="phones-footer__item">
+                    <a class="phones-footer__link" href="tel:+74997033667">8 (499) 703 · 36 · 67</a>
+                </li>
+            </ul>
+
+            <center>
+                <p><small>© copyright 2022 MobileMonster Corp.</small></p>
+                <a class="url_footer_owner" href="https://testerdev.ru/">Автор сайта TESTERDEV</a>
+            </center>
+        </div>
+    </footer>
+</body>
+</html>
