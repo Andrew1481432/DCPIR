@@ -1,21 +1,20 @@
 body
 {
     background-image: url('./back.jpg');
+    background-repeat: no-repeat;
+
     color: #555;
-    font-family: 'Roboto Condensed',Arial,sans-serif;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
     font-size: 15px;
 }
-a
-{
+a {
     border-bottom: 1px solid;
 }
-a:hover
-{
+a:hover {
     border: 0;
     text-decoration: none;
 }
-header:after
-{
+header:after {
     bottom: 0;
     content: '';
     display: block;
@@ -26,8 +25,7 @@ header:after
     top: 0;
     z-index: -1;
 }
-.headerText
-{
+.headerText {
     box-sizing: border-box;
     left: 50%;
     moz-transform: translate(-50%,-50%);
@@ -42,19 +40,16 @@ header:after
     width: 100%;
     word-wrap: break-word;
 }
-.headerText strong
-{
+.headerText strong{
     display: block;
     font-size: 23px;
     line-height: 1;
     text-transform: uppercase;
 }
-.headerIp
-{
+.headerIp {
     text-transform: uppercase;
 }
-.together
-{
+.together {
     border-collapse: separate;
     display: table;
     height: 40px;
@@ -69,19 +64,17 @@ header:after
     webkit-transform: translate(-50%);
     width: 100%;
 }
-.together>div
-{
+
+.together > div {
     display: table-cell;
     vertical-align: middle;
 }
-.together .button
-{
+.together .button {
     padding-left: 30px;
     padding-right: 30px;
     white-space: nowrap;
 }
-.mySelect
-{
+.mySelect {
     border: 1px solid #fff;
     box-sizing: border-box;
     color: #fff;
@@ -313,8 +306,7 @@ article
     position: relative;
     z-index: 3;
 }
-footer
-{
+footer {
     color: #fff;
 }
 @media screen and (min-width:740px)
