@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* region header */
+header {
+    background-color: #623e63;
+
+    font-size: 0.8em;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.logo{
+    float: none;
+
+    width: 880px;
+    height: 50px;
+
+    margin-left: 40px;
+    padding-top: 20px;
+
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.logo_img {
+    width: 5%;
+
+    top: 30px;
+    left: 2%;
+    display: inline-block;
+    position: absolute;
+}
+
+.logo_text {
+    top: 12px;
+    left: 10%;
+    display: inline-block;
+    position: absolute;
+}
+
+.logo h1, .logo h2 {
+    font:normal 300% 'Open Sans', arial, sans-serif;
+    margin: 0 0 0 9px;
+}
+
+.logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
+    padding: 22px 0 0 0;
+    color: #fff;
+
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+}
+.logo_text h2 {
+    font-size: 0.9em;
+    padding: 4px 0 0 0;
+    color: #999;
+
+    text-decoration: underline;
+}
+/* endregion*/
+
+/* region menu */
+nav {
+    top: 20px;
+    width: 100%;
+    height: 20px;
+
+    position: relative;
+
+    margin-bottom: 24px;
+
+    display: block;
+}
+
+ul.menu{
+    position: absolute;
+    bottom: 50%;
+    left: 34%;
+}
+
+ul.menu > li{
+    float: right;
+
+    list-style: none; /* убираем маркеры списка */
+    margin:1px 2px 0 0;
+    padding: 0 0 0 9px;
+}
+
+ul.menu li a{
+    font: normal 100% 'trebuchet ms' , sans-serif;
+
+    display: block;
+    height: 20px;
+    padding:6px 35px 5px 28px;
+    color:#fff;
+}
+
+ul.menu li a:hover{
+    color: #d0d0d0;
+}
+/* endregion */
+
+aside {
+    width: 20%;
+    float: left;
+    padding: 20px 30px 0 0;
+
+    margin: 10px;
+
+    height:600px;
+
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+
+main {
+    margin-top: 150px;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font:normal 170% 'Open Sans', arial;
+    color: #000;
+}
+
+article{
+    width: 65%;
+    float: left;
+    text-align: left;
+    padding: 30px 0 0 30px;
+
+    overflow: hidden;
+}
+
+section p {
+    line-height: 1.5em;
+    padding: 3%;
+    text-align: center;
+}
+
+section {
+    display: block;
+}
+
+article section {
+    font-size: 120%;
+}
+
+.posts_content {
+    font-size: 0.8em;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* region right_side */
+
+.sidebar {
+    width: 222px;
+    padding: 5%;
+    margin: 0 0 16px 0;
+    border: solid 1px #f2f2f2;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.sidebar h2 {
+    color: #136cb2;
+    font-size: 140%;
+
+    padding-bottom: 8px;
+}
+
+.input_field {
+    color: #5d5d5d;
+    width: 60%;
+    padding: 8px;
+}
+
+input, textarea {
+    outline: none;
+    border:none;
+    border: solid 1px #f2f2f2;
+}
+
+
+button, .btn {
+    padding: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.lables_passreg_text a {
+    outline: none;
+    text-decoration: none;
+    color: #aeb002;
+}
+
+.lables_passreg_text a:hover {
+    text-decoration: underline;
+}
+
+.lables_passreg_text {
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.item-video-index__image {
+    /*object-fit: cover;*/
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.item-video-index {
+    list-style: none;
+}
+
+.item-video-index__title {
+    background-color: #f9f9fb;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.item-video-index__title a{
+    color: #000;
+}
+
+/* endregion */
+
+/* region footer */
+footer {
+    bottom: 0;
+
+    padding-left: 40px;
+    background-color: #623e63;
+
+    font-size: 0.8em;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.wrapper {
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 15%;
+    font-size: 0.8em;
+}
+
+.url_footer_owner{
+    text-decoration: none;
+    font:normal 100% 'Open Sans', arial;
+    color: #d0d0d0;
+}
+
+address + .phones-footer {
+    list-style: none;
+}
+
+.phones-footer__link {
+    font-size: 24px;
+    color: #fff;
+}
+
+footer nav li a{
+    color: #a8aa94;
+}
+
+footer p{
+    padding-top: 10px;
+    font:normal 200% 'century gothic', arial, sans-serif;
+    line-height: 1.5em;
+    color: #a8aa94;
+}
+/* endregion */
