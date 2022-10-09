@@ -48,51 +48,39 @@ function changeFormToRegister() {
         "                    </div>";
 }
 function loadPage(name) {
-    new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        var loc = window.location.pathname;
-        var dir = loc.substring(0, loc.lastIndexOf('/'));
-        dir += '/app/page/' + name + ".html?" + Math.random();
-        xhr.open("GET", dir);
-        xhr.send();
-        xhr.onerror = function (args) {
-            reject(args);
-        };
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                resolve(xhr.responseText);
-            }
-        };
-    }).then(function (r) {
-        var main = document.getElementById("main");
-        main.innerHTML = String(r);
-    }).catch(function (e) {
+    var xhr = new XMLHttpRequest();
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    dir += '/app/page/' + name + ".html?" + Math.random();
+    xhr.open("GET", dir);
+    xhr.send();
+    xhr.onerror = function (args) {
         console.error("Undefined page " + name + '.html');
         throw new Error("Произошла ошибка");
-    });
+    };
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            var main = document.getElementById("main");
+            main.innerHTML = String(xhr.responseText);
+        }
+    };
 }
 function loadScript(name) {
-    new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        var loc = window.location.pathname;
-        var dir = loc.substring(0, loc.lastIndexOf('/'));
-        dir += '/app/page/' + name + ".js?" + Math.random();
-        xhr.open("GET", dir);
-        xhr.send();
-        xhr.onerror = function (args) {
-            reject(args);
-        };
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                resolve(xhr.responseText);
-            }
-        };
-    }).then(function (r) {
-        eval(String(r));
-    }).catch(function (e) {
+    var xhr = new XMLHttpRequest();
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    dir += '/app/page/' + name + ".js?" + Math.random();
+    xhr.open("GET", dir);
+    xhr.send();
+    xhr.onerror = function (args) {
         console.error("Undefined script js " + name + '.js');
         throw new Error("Произошла ошибка");
-    });
+    };
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            eval(String(xhr.responseText));
+        }
+    };
 }
 function changeFormToAuth() {
     var formAuth = document.getElementById("form_auth");

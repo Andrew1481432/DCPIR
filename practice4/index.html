@@ -36,9 +36,10 @@
         <!-- 2.	Задать position для navigation (меню сайта) и логотипа/названия веб-страницы. -->
         <nav>
             <ul class="menu">
-                <li><a href="">О САЙТЕ</a></li>
+                <li><a onclick="loadPage('about'); loadScript('main')">О САЙТЕ</a></li>
                 <li><a href="">ДОСТАВКА</a></li>
                 <li><a href="">ДЛЯ СМИ И БЛОГЕРОВ</a></li>
+                <li><a onclick="loadPage('main'); loadScript('main')">Главное</a></li>
             </ul>
         </nav>
     </header>

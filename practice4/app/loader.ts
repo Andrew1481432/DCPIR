@@ -49,56 +49,40 @@ function changeFormToRegister() {
 }
 
 function loadPage(name: string) {
-       new Promise(
-           (resolve, reject) => {
-               const xhr = new XMLHttpRequest();
-               let loc = window.location.pathname;
-               let dir = loc.substring(0, loc.lastIndexOf('/'));
-               dir += '/app/page/'+name + ".html?"+Math.random();
-               xhr.open("GET", dir);
-               xhr.send();
-               xhr.onerror = (args) => {
-                   reject(args);
-               };
-               xhr.onreadystatechange = () => {
-                   if (xhr.readyState === XMLHttpRequest.DONE) {
-                       resolve(xhr.responseText);
-                   }
-               }
-           }
-       ).then(r => {
-           let main = document.getElementById("main");
-           main.innerHTML = String(r);
-       }).catch(e => {
-           console.error("Undefined page " + name+'.html');
-           throw new Error("Произошла ошибка");
-       });
+    const xhr = new XMLHttpRequest();
+    let loc = window.location.pathname;
+    let dir = loc.substring(0, loc.lastIndexOf('/'));
+    dir += '/app/page/'+name + ".html?"+Math.random();
+    xhr.open("GET", dir);
+    xhr.send();
+    xhr.onerror = (args) => {
+        console.error("Undefined page " + name+'.html');
+        throw new Error("Произошла ошибка");
+    };
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            let main = document.getElementById("main");
+            main.innerHTML = String(xhr.responseText);
+        }
+    }
 }
 
 function loadScript(name: string) {
-    new Promise(
-        (resolve, reject) => {
-            const xhr = new XMLHttpRequest();
-            let loc = window.location.pathname;
-            let dir = loc.substring(0, loc.lastIndexOf('/'));
-            dir += '/app/page/'+name + ".js?"+Math.random();
-            xhr.open("GET", dir);
-            xhr.send();
-            xhr.onerror = (args) => {
-                reject(args);
-            };
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    resolve(xhr.responseText);
-                }
-            }
-        }
-    ).then(r => {
-        eval(String(r));
-    }).catch(e => {
+    const xhr = new XMLHttpRequest();
+    let loc = window.location.pathname;
+    let dir = loc.substring(0, loc.lastIndexOf('/'));
+    dir += '/app/page/'+name + ".js?"+Math.random();
+    xhr.open("GET", dir);
+    xhr.send();
+    xhr.onerror = (args) => {
         console.error("Undefined script js " + name+'.js');
         throw new Error("Произошла ошибка");
-    });
+    };
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            eval(String(xhr.responseText));
+        }
+    }
 }
 
 function changeFormToAuth() {
