@@ -1,0 +1,25 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+photo {
+    border-radius: 20px;
+}
+
+.photo img {
+    border-radius: 20px;
+
+    height: 500px;
+    max-width: 900px;
+}
+
+@media screen and (max-width: 635px) {
+    .photo img {
+        max-width: 100% !important;
+        max-height: 300px !important;
+    }
+}

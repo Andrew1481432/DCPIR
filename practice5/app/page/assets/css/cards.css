@@ -1,0 +1,73 @@
+.content {
+    font-size: calc(100% + 50px);
+
+    line-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#flexA {
+    background-color: blue;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
+}
+
+#flexB {
+    background-color: red;
+
+    border: 2px solid white;
+    border-radius: 10px;
+
+    height: 200px;
+    width: 76.1%;
+}
+
+#flexC {
+    background-color: greenyellow;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 200px;
+    width: 21%;
+}
+
+#flexD {
+    background-color: green;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 200px;
+    min-width: 29.1%;
+    width: 29.1%;
+}
+
+#flexE {
+    background-color: magenta;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 200px;
+    width: 68%;
+}
+/* Для ширины 1000 пикселей и меньше */
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        font-size: calc(24px - 20%) !important;
+    }
+    #flexB {
+        width: 100% !important;
+    }
+    #flexC {
+        width: 100% !important;
+    }
+    #flexD {
+        width: 46% !important;
+    }
+    #flexE {
+        width: 46% !important;
+    }
+}
