@@ -1,0 +1,131 @@
+.content_auth {
+    background-color: rgb(31, 31, 31);
+    height: 300px;
+}
+
+
+/* region grid_auth  */
+
+button {
+    margin-left: calc(40% - 90px);
+
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    background-color: #52cdf6;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.grid_auth {
+    display: grid;
+    grid-template-columns: [one] 1fr [two] 1fr;
+    grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr;
+    gap: 20px;
+    column-gap: 40px;
+    width: 550px;
+    margin-left: calc(40% - 90px);
+}
+
+.text-area {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.grid_auth input[type="text"] {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #52cdf6;
+    background-color: rgb(31, 31, 31);
+    color: gray;
+    transition: all 0.5s ease;
+    padding-left: 4px;
+}
+
+.grid_auth input[type="text"]:focus {
+    background-color: #52cdf6;
+
+    border: none;
+    border-color: transparent;
+
+    transition: all 0.5s ease;
+}
+
+.grid_auth input[type="text"]::placeholder {
+    color: white;
+}
+
+.grid_auth input[type="text"]:hover::placeholder {
+    font-size: 15px;
+
+    position: absolute;
+    left: -3px;
+}
+
+@media screen and (max-width: 1000px) {
+    .content_auth {
+        height: 500px;
+    }
+
+
+    .grid_auth {
+        grid-template-columns: [one] 1fr !important;
+        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr !important;
+        width: 320px !important;
+        margin-left: calc(30% - 90px) !important;
+    }
+
+    .name {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .suname {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .email {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .phone {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .text-area {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+}
+/* endregion */
