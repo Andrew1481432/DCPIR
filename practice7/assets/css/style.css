@@ -14,6 +14,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to left, #623e63, #9910cb);
+    z-index: 2;
 
     position: fixed; /* Set the navbar to fixed position */
 
@@ -445,6 +446,52 @@ footer p{
     line-height: 1.5em;
     color: #a8aa94;
 }
+
+/* region task 2 anim social */
+
+.contacts_social {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center
+}
+
+.social {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+
+    background: linear-gradient(315deg, #47f403, #ffae00);
+}
+
+.social img {
+    position: relative;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    padding-left: 15px;
+    padding-top: 15px;
+
+    z-index: 3;
+}
+
+.social::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #623e63;
+    transition: 0.7s;
+}
+
+.social:hover:before {
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+/* endregion */
+
 /* endregion */
 
 /* region about */
