@@ -134,7 +134,59 @@
 .item6:hover,
 .item7:hover {
     background-color: rgb(255, 0, 99);
+
     transition: all 0.5s ease;
     transform: scale(102%);
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        height: 1390px;
+    }
+
+    .grid {
+        grid-template-columns: [one] 1fr;
+        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr;
+    }
+
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .item2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .item3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .item4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .item5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
 }
 /* endregion */

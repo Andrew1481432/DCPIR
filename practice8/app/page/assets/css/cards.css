@@ -72,6 +72,8 @@ button:hover {
     font-size: 15px;
 
     position: absolute;
+
+    transition: all 0.7s ease;
     left: -3px;
 }
 

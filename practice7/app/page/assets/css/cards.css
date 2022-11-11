@@ -25,6 +25,7 @@
 
 .container .box::before {
     content:' ';
+
     position: absolute;
     top: 0;
     left: 50px;
@@ -180,6 +181,7 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
     z-index: 1;
     transition: 0.5s;
     color: #fff;
@@ -225,9 +227,6 @@
 
 /* region auth task3 */
 
-/* glassmorphism  */
-
-
 .glassmorphism {
     display: flex;
     justify-content: center;
@@ -249,8 +248,7 @@
 }
 
 
-/* fly1 */
-
+/* region fly1 */
 .glassmorphism .glassmorphism_box .fly1 {
     display: block;
     position: absolute;
@@ -274,6 +272,7 @@
     border-radius: 8px;
     background: red;
     background: rgba(255, 255, 255, 0.1);
+
     backdrop-filter: blur(10px);
 
     opacity: 0;
@@ -295,6 +294,7 @@
 
 .glassmorphism .glassmorphism_box .fly1::after {
     content: '';
+
     position: absolute;
 
     bottom: 0;
@@ -313,6 +313,16 @@
     animation-delay: -1s;
 }
 
+@keyframes animate1 {
+    0%,
+    100% {
+        transform: translate(150px);
+    }
+    50% {
+        transform: translate(-50px);
+    }
+}
+
 .glassmorphism .glassmorphism_box:hover .fly1::after {
     bottom: -50px;
     right: 50px;
@@ -322,9 +332,9 @@
 
     opacity: 1;
 }
+/* endregion */
 
-
-/* fly2 */
+/* region fly2 */
 
 .glassmorphism .glassmorphism_box .fly2 {
     display: block;
@@ -355,6 +365,16 @@
     transition: 0.5s;
     animation: animate2 1.5s ease-in-out infinite;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes animate2 {
+    0%,
+    100% {
+        transform: translateY(15px);
+    }
+    50% {
+        transform: translate(-15px);
+    }
 }
 
 .glassmorphism .glassmorphism_box:hover .fly2::before {
@@ -397,25 +417,7 @@
     opacity: 1;
 }
 
-@keyframes animate1 {
-    0%,
-    100% {
-        transform: translate(150px);
-    }
-    50% {
-        transform: translate(-50px);
-    }
-}
-
-@keyframes animate2 {
-    0%,
-    100% {
-        transform: translateY(15px);
-    }
-    50% {
-        transform: translate(-15px);
-    }
-}
+/* endregion */
 
 .glassmorphism .glassmorphism_box .glassmorphism_content {
     position: relative;
@@ -498,20 +500,21 @@
 
     flex-wrap: wrap;
 
-
     padding: 40px 0;
 }
 .container1 .box1 {
     position: relative;
     width: 320px;
     height: 400px;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     margin: 40px 30px;
     transition: 0.5s;
 }
-
 
 .container1 .box1 .content1 {
     position: relative;
@@ -594,6 +597,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin: 30px auto;
+
     display: flex;
 
     align-items: center;
@@ -648,7 +652,7 @@
     width: calc(100% - 12px);
     height: calc(100% - 12px);
 
-    background: white;
+    background: none;
     border-radius: 5px;
 }
 
