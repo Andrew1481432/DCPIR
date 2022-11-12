@@ -1,0 +1,44 @@
+<!-- Создать области секций с помощью тега <section>, задать секциям заголовки. -->
+<article>
+    <div style="text-align: center; margin-bottom: 20px">
+        <h2>Контакты</h2>
+    </div>
+    <section>
+        <hr>
+        <h2 id="subHeader_about">Оставьте свой отзыв о "Смартфоны для моложежи"</h2>
+        <div class="send">
+            <form method="post" action="#" id="review">
+                <input class="input_field" type="text" name="review_name" placeholder="ваше имя">
+                <input class="input_field" type="text" name="review_email" placeholder="ваш E-mail">
+                <textarea cols="20" rows="20" minlength="20" maxlength="100" name="review_text" placeholder="ваш отзыв" required></textarea>
+                <br>
+                <button class="button-85">отправить</button>
+                <button class="button-74">TEST</button>
+            </form>
+        </div>
+    </section>
+</article>
+<aside>
+    <div class="sidebar">
+        <h2>Вход</h2>
+        <form id="form_auth" onsubmit="return false" id="login">
+
+        </form>
+    </div>
+
+    <ul class="video_container">
+        <div style="background-color: #f9f9fb; text-align: center; padding-bottom: 20px">
+            <h2>ВИДОСИКИ</h2>
+        </div>
+
+        <div class="video_info">
+            <h2>Заголовок</h2><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati optio necessitatibus fugit nobis enim totam sunt culpa, officia voluptate? Expedita accusantium repellat odio veniam at dignissimos eius odit a sit.</p>
+        </div>
+
+        <video width="213" height="130" preload="auto" poster="assets/img/poster_iphone14pro.png" controls>
+            <source src="../res/video/unboxiphone.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </ul>
+</aside>
