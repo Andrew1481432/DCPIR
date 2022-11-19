@@ -82,7 +82,9 @@
     gap: 20px;
     column-gap: 40px;
     width: 550px;
+
     margin-left: calc(40% - 130px);
+    margin-right: calc(40% - 130px);
 }
 
 .text-area {
@@ -103,9 +105,9 @@
     padding-left: 4px;
 }
 
-@media screen and (max-width: 721px) {
+@media screen and (max-width: 730px) {
     .grid_auth {
-        width: 420px !important;
+        width: 70% !important;
     }
 }
 
@@ -114,6 +116,7 @@
         grid-template-columns: [one] 1fr !important;
         grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4] 1fr [row5] 1fr !important;
         margin-left: calc(30% - 90px) !important;
+        margin-right: calc(30% - 90px) !important;
     }
 
     .name {
