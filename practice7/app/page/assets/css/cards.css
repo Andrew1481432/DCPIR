@@ -652,7 +652,7 @@
     width: calc(100% - 12px);
     height: calc(100% - 12px);
 
-    background: none;
+    background: white;
     border-radius: 5px;
 }
 

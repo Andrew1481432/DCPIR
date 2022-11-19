@@ -1,0 +1,166 @@
+<div class="navbar-fixed">
+	<nav class="green">
+		<div class="nav-wrapper">
+			<div class="container">
+				<a href="" class="brand-logo">GameMonster</a>
+
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a onclick="logOut();return false">Выйти</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+</div>
+
+<br/>
+
+<div class="hide-on-large-only">
+	<center>
+		<a class="btn-large green white-text" onclick="logOut();return false">Выйти</a>
+	</center>
+	<br />
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col xl8 l8 m6 s12">
+			<div class="row">
+				<div class="col l5 s12">
+					<div class="card ava-card">
+						<div class="ava-spacer"></div>
+						<div class="center" style="margin-bottom: -20px;">
+							<img src="https://skin.gr-wix.ru/helm/{{lower_name}}.png" alt="skin" class="responsive-img ava" />
+						</div>
+						<div class="card-content">
+							<h4 class="center" style="margin-bottom: -13px;">{{name}}</h4>
+							<h5 class="center"><span id="coins">{{coins}}</span> <span class="orange-text">•</span></h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col l7 s12 {{isPayAllowedClass}}">
+					<div class="card">
+						<div class="c-space"></div>
+						<h5 class="c-title">Перевод монет</h5>
+						<div class="card-content">
+							<form autocomplete="off">
+
+								<div class="input-field">
+									<i class="material-icons prefix">account_circle</i>
+									<input id="pay_target" autocomplete="rar1" type="text" class="validate">
+									<label for="pay_target">Никнейм получателя</label>
+								</div>
+
+								<div class="input-field">
+									<i class="material-icons prefix">attach_money</i>
+									<input id="pay_count" autocomplete="rar2" type="number" class="validate">
+									<label for="pay_count">Сумма перевода</label>
+								</div>
+
+								<a class="btn-large waves-effect waves-light green" onclick="sendMoneyForm()" href="#">Перевести</a>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="col l6 s12 {{transactionsClass}}">
+					<div class="card">
+						<div class="c-space"></div>
+						<h5 class="c-title">Последние переводы</h5>
+
+						<br />
+						<ul class="collection">
+							<li class="collection-item avatar">
+								<img id="transaction_0_img" src="https://skin.gr-wix.ru/helm/{{transaction_0_nickname}}.png" alt="" class="circle">
+								<span class="title">Перевод</span>
+								<p id="transaction_0_text">{{transaction_0_text}}</p>
+								<a href="#" id="transaction_0_count" class="secondary-content {{transaction_0_class}}">{{transaction_0_count}} •</a>
+							</li>
+							<li class="collection-item avatar">
+								<img id="transaction_1_img" src="https://skin.gr-wix.ru/helm/{{transaction_1_nickname}}.png" alt="" class="circle">
+								<span class="title">Перевод</span>
+								<p id="transaction_1_text">{{transaction_1_text}}</p>
+								<a href="#" id="transaction_1_count" class="secondary-content {{transaction_1_class}}">{{transaction_1_count}} •</a>
+							</li>
+							<li class="collection-item avatar">
+								<img id="transaction_2_img" src="https://skin.gr-wix.ru/helm/{{transaction_2_nickname}}.png" alt="" class="circle">
+								<span class="title">Перевод</span>
+								<p id="transaction_2_text">{{transaction_2_text}}</p>
+								<a href="#" id="transaction_2_count" class="secondary-content {{transaction_2_class}}">{{transaction_2_count}} •</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col l6 s12">
+					<div class="card">
+						<div class="c-space"></div>
+						<h5 class="c-title">Пароль</h5>
+						<div class="card-content">
+							<form autocomplete="off">
+								<div class="input-field">
+									<i class="material-icons prefix">lock</i>
+									<input id="changepass_oldpass" autocomplete="rar3" type="password" class="validate">
+									<label for="changepass_oldpass">Старый пароль</label>
+								</div>
+								<div class="input-field">
+									<i class="material-icons prefix">lock</i>
+									<input id="changepass_newpass" autocomplete="rar4" type="password" class="validate">
+									<label for="changepass_newpass">Новый пароль</label>
+								</div>
+								<a class="btn-large waves-effect waves-light green" onclick="changePass()" href="#">Сменить пароль</a>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="col xl4 l4 m6 s12">
+			<div class="card">
+				<div class="c-space"></div>
+				<h5 class="c-title">Привилегии</h5>
+				<br />
+				<ul class="collection">
+					<li class="collection-item avatar">
+						<img src="img/sw.png" alt="" class="circle">
+						<span class="title">SkyWars</span>
+						<p>[{{privilege_sw}}]</p>
+					</li>
+					<li class="collection-item avatar">
+						<img src="img/bw.png" alt="" class="circle">
+						<span class="title">BedWars</span>
+						<p>[{{privilege_bw}}]</p>
+					</li>
+					<li class="collection-item avatar">
+						<img src="img/kp.png" alt="" class="circle">
+						<span class="title">MineBattles</span>
+						<p>[{{privilege_mb}}]</p>
+					</li>
+					<li class="collection-item avatar">
+						<img src="img/dr.png" alt="" class="circle">
+						<span class="title">DeathRun</span>
+						<p>[{{privilege_dr}}]</p>
+					</li>
+					<li class="collection-item avatar">
+						<img src="img/mm.png" alt="" class="circle">
+						<span class="title">MurderMystery</span>
+						<p>[{{privilege_mm}}]</p>
+					</li>
+					<li class="collection-item avatar">
+						<img src="img/sb.png" alt="" class="circle">
+						<span class="title">SkyBlock</span>
+						<p>[{{privilege_sb}}]</p>
+					</li>
+					<li class="collection-item avatar">
+						<img src="img/sb.png" alt="" class="circle">
+						<span class="title">MineBattles</span>
+						<p>[{{privilege_mw}}]</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<p class="center"><a class="green-text" href="https://gr-wix.ru">GameMonster</a><span class="grey-text"> &copy; 2015-2022</span></p>
+</div>
