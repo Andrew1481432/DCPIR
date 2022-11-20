@@ -31,7 +31,7 @@ Render.addPage("account",
 							transactionsClass: transactions.length === 3 ? "" : "hide",
 							transaction_0_count: transactions[0].count,
 							transaction_0_nickname: (transactions[0].nickname || "").toLowerCase(),
-							transaction_0_class: transactions[0].count[0] === "-" ? "red-text" : "green-text", // Да, гкод, но как-то пофиг)
+							transaction_0_class: transactions[0].count[0] === "-" ? "red-text" : "green-text",
 							transaction_0_text: transactions[0].text,
 							transaction_1_count: transactions[1].count,
 							transaction_1_nickname: (transactions[1].nickname || "").toLowerCase(),
