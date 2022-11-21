@@ -1,0 +1,169 @@
+<!-- Тег DOCTYPE — ключевой компонент web-страниц, претендующих на соответствие стандартам: без него ваш код и CSS не пройдут проверку валидатором. -->
+<!DOCTYPE html>
+<!-- Тег <html> является контейнером, который заключает в себе все содержимое веб-страницы -->
+<html lang="en">
+<!-- Тег <head> предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными. -->
+<head>
+    <!-- Указывает кодировку документа.  -->
+    <meta charset="UTF-8">
+    <!-- Сообщает браузеру о том, как именно обрабатывать размеры страницы, и изменять её масштаб. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Определяет заголовок документа. -->
+    <title>Главная | MobileMonster</title>
+    <!-- Подключаем фавикон -->
+    <link rel="icon" type="image/png" href="assets/img/fav.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!-- Элемент <body> предназначен для хранения содержания веб-страницы (контента) -->
+<body>
+    <!-- Задает «шапку» сайта или раздела, в которой обычно располагается заголовок. -->
+    <header>
+        <!-- Заголовок в который вложена ссылка -->
+        <div class="logo">
+            <div class="logo_img">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" height="65" alt="Логотип"/>
+                </a>
+            </div>
+
+            <div class="logo_text">
+                <h1><a href="index.html">Смартфоны для молодёжи</a></h1>
+                <h2>Смартфоны - наша страсть!</h2>
+            </div>
+        </div>
+
+        <nav>
+            <input id="menu-toggle" type="checkbox" />
+
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+
+            <ul class="menu">
+                <li><a onclick="loadPage('main'); executeScript('main')">ГЛАВНАЯ</a></li>
+                <li><a onclick="loadPage('cards'); loadCSS('cards'); executeScript('cards')">КАРТЫ</a></li>
+                <li><a onclick="">ГАЛЕРЕЯ</a></li>
+<!--                <li><a onclick="loadPage('gallery'); loadCSS('gallery')">ГАЛЕРЕЯ</a></li>-->
+                <li><a onclick="loadPage('about'); executeScript('main')">О САЙТЕ</a></li>
+            </ul>
+
+            <div class="base">
+                <div class="dropdown">
+                    <button class="dropbtn">ddd</button>
+                    <ol class="dropdown-content">
+                        <div class="dropdown_line">
+                            <div class="base icon"></div>
+                        </div>
+                        <li><a href="#">Уведомление 1</a></li>
+                        <li><a href="#">Уведомление 2</a></li>
+                        <li><a href="#">Уведомление 3</a></li>
+                    </ol>
+                </div>
+                <div class="indicator">
+                    <div class="noti_count">3</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Применить тег <main> для разметки уникального контента на странице. -->
+    <main id="main">
+
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <p>Всегда на связи</p>
+            <address class="url_footer_owner">
+                For more details, contact
+                <a class="url_footer_owner" href="mailto:88005553535@mail.ru">John Smith</a>.
+            </address>
+
+            <ul class="phones-footer">
+                <li class="phones-footer__item">
+                    <a class="phones-footer__link" href="tel:+74951804130">8 (495) 180 · 41 · 30</a>
+                </li>
+
+                <li class="phones-footer__item">
+                    <a class="phones-footer__link" href="tel:+74997033667">8 (499) 703 · 36 · 67</a>
+                </li>
+            </ul>
+
+            <!-- CONTACTS -->
+            <div class="contacts_social">
+                <div class="social">
+                    <img src="assets/img/socialIcon/vk.png" alt="">
+                </div>
+                <div class="social">
+                    <img src="assets/img/socialIcon/youtube.png" alt="">
+                </div>
+                <div class="social">
+                    <img src="assets/img/socialIcon/telegram.png" alt="">
+                </div>
+                <div class="social">
+                    <img src="assets/img/socialIcon/instagram.png" alt="">
+                </div>
+                <div class="social">
+                    <img src="assets/img/socialIcon/twitter.png" alt="">
+                </div>
+            </div>
+
+            <center>
+                <p><small>© copyright 2022 MobileMonster Corp.</small></p>
+                <a class="url_footer_owner" href="https://testerdev.ru/">Автор сайта TESTERDEV</a>
+            </center>
+        </div>
+    </footer>
+    <script src="app/loader.js"></script>
+    <script type="application/javascript">
+        loadPage("main");
+        executeScript("main");
+
+        function set_like(){
+            let like_button = document.getElementById("bl2");
+            let counter = document.getElementById("counter_like");
+            let splitSrc = like_button.src.split('/');
+            if (splitSrc[splitSrc.length-1] === "reactions-off.png"){
+                like_button.src = 'assets/img/like/reactions-on.png';
+                counter.innerText = "2";
+            } else {
+                like_button.src = 'assets/img/like/reactions-off.png';
+                counter.innerText = "1";
+            }
+        }
+
+        var runningDraw = false;
+
+        function draw() {
+            runningDraw = !runningDraw;
+        }
+
+        var followCursor = (function() {
+            return {
+                run: function(e) {
+                    if(runningDraw) {
+                        var e = e || window.event;
+
+                        let img = document.createElement('img');
+                        img.style.position = 'absolute';
+                        img.style.margin = '0';
+                        img.style.padding = '5px';
+                        img.src = "assets/img/like/reactions-off.png";
+                        img.style.left = (e.clientX - 10) + 'px';
+                        img.style.top = (e.clientY - 10) + 'px';
+                        img.width = 50;
+
+                        document.body.appendChild(img);
+                    }
+                }
+            };
+        }());
+
+        window.onload = function() {
+            document.body.onmousemove = followCursor.run;
+        }
+
+    </script>
+</body>
+</html>
