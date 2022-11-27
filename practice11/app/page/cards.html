@@ -1,0 +1,118 @@
+<!-- CONTENT -->
+<section>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Я карточка </h2>
+                <p>Это карточка 1</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Я карточка </h2>
+                <p>Это карточка 2</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Я карточка</h2>
+                <p>Это карточка 3</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="glassmorphism">
+        <div class="glassmorphism_box">
+
+            <div class="fly1"></div>
+            <div class="fly2"></div>
+
+            <div class="glassmorphism_content">
+                <h2>Авторизация</h2>
+                <input type="text" placeholder="Логин"><br>
+                <input type="password" placeholder="Пароль"><br>
+                <div class="containerCaptcha">
+                    <input id="enterCaptcha" type="text" placeholder="Enter captcha">
+                    <button id="refresh" onclick="refreshCanvas();"><img src="https://cdn-icons-png.flaticon.com/128/1549/1549456.png"></button>
+                    <canvas id="captchaCanvas" height=40 width="150"></canvas>
+                </div>
+                <a id="submitCaptcha" onclick="onSubmitCaptcha();">Войти</a>
+                <p>Забыли пароль?</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bl">
+    <center>
+        <div id="shoppingCart" onclick="deleteElement()">
+            <img src="https://cdn-icons-png.flaticon.com/128/5976/5976474.png">
+            <span></span>
+        </div>
+    </center>
+    <div class="container1">
+        <div class="box1">
+            <span></span>
+            <div class="content1">
+                <h2>Iphone 12</h2>
+                <p>110 К</p>
+                <center>
+                    <button onclick="addToCart()">+</button>
+                </center>
+            </div>
+        </div>
+        <div class="box1">
+            <span></span>
+            <div class="content1">
+                <h2>Iphone 11</h2>
+                <p>140 К</p>
+                <center>
+                    <button onclick="addToCart()">+</button>
+                </center>
+            </div>
+        </div>
+        <div class="box1">
+            <span></span>
+            <div class="content1">
+                <h2>Iphone 14</h2>
+                <p>300 К</p>
+                <center>
+                    <button onclick="addToCart()">+</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div id="arrayTwo">
+        <span id="originalArray">Array: </span>
+        <div>
+            <input placeholder="Min" type="number" min="0" max="49" value="1" id="min">
+            <input placeholder="Max" type="number" min="1" max="50" value="50" id="max">
+            <input type="button" value="Filter" id="filter">
+        </div>
+        <span id="filteredArray">Filtered: </span>
+    </div>
+    <div id="arrayThree">
+        <button id="sortAsc">Ascending</button>
+        <button id="sortDesc">Descending</button>
+        <span>3</span>
+        <span>2</span>
+        <span>4</span>
+        <span>1</span>
+        <span>0</span>
+        <span>5</span>
+    </div>
+</section>
