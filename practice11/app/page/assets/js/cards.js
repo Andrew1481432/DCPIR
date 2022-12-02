@@ -17,9 +17,11 @@ setTimeout(function () {
     document.getElementById("filter").onclick = function () {
         minVal = document.getElementById("min").value;
         maxVal = document.getElementById("max").value;
+
         for (let i = 0; i < 20; i++) {
             arrA[i] = Math.floor(Math.random() * 50);
         }
+
         filteredArr.innerHTML = "Filtered\n" + filterArray(arrA, minVal, maxVal);
         origArr.innerHTML = "Original\n" + arrA;
     }
@@ -35,10 +37,12 @@ setTimeout(function () {
                 if (mode === 0) {
                     if (sortElements[j].innerHTML < sortElements[i].innerHTML) {
                         taskThree.insertBefore(sortElements[j], sortElements[i]);
+
                         sortElements = document.querySelectorAll("#arrayThree span");
                     }
                 } else if (sortElements[j].innerHTML > sortElements[i].innerHTML) {
                     taskThree.insertBefore(sortElements[j], sortElements[i]);
+
                     sortElements = document.querySelectorAll("#arrayThree span");
                 }
             }

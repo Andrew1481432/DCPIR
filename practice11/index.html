@@ -173,15 +173,24 @@
             // region task 4-5
             let iterateDropDown = 4;
 
+            let waiting = false;
+
             let dropdown = document.getElementsByClassName("dropdown-content")[0];
             let drop = document.getElementsByClassName("dropdown")[0];
             let noti_count = document.getElementsByClassName("noti_count")[0];
 
             let timer = setInterval(addMessages, 3000);
             drop.onmouseover = function () {
+                if(waiting) {
+                    return;
+                }
+
+                waiting = true;
                 clearInterval(timer);
+
                 setTimeout(() => {
-                    timer = setInterval(addMessages, 3000)
+                    timer = setInterval(addMessages, 3000);
+                    waiting = false;
                 }, 10000);
             };
 
