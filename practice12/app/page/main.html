@@ -1,0 +1,78 @@
+<!-- Создать области секций с помощью тега <section>, задать секциям заголовки. -->
+<article>
+    <div style="text-align: center; margin-bottom: 20px">
+        <h2>БЛОГ</h2>
+    </div>
+    <section>
+        <hr>
+        <h2>
+            <a href="#">iPhone 14 Pro на бумаге и в реальной жизни. Самый подробный обзор!</a>
+        </h2>
+        <div class="posts_content">
+            <p>
+                Apple продолжает традицию, поэтому в этом году iPhone 14 Pro и 14 Pro Max снова отличаются лишь размером экрана и батареи, что позволяет вам гораздо легче выбирать, а нам — снимать и рассказывать. Что пообещала Apple на презентации и как это всё работает в реальной жизни? Давайте разбираться.
+            </p>
+        </div>
+        <p><a href="#">читать</a></p>
+    </section>
+
+    <section>
+        <hr>
+        <h2><a href="#">Что не так с «Динамическим островом» iPhone 14 Pro и почему он только мешает</a></h2>
+        <div class="posts_content">
+            <p>
+                После презентации iPhone 14 всё внимание общественности приковано к «Динамическому острову» — главной программной инновации Apple, которая сильно преображает использование смартфона и маскирует его двойной вырез под камеру с датчиками Face ID. Но пока большинство восторгается этим уникальным дизайнерским решением, нашлись и те, кому оно откровенно не нравится — по ряду объективных причин.
+            </p>
+        </div>
+        <div class="buttons">
+            <figure onclick="set_like()">
+                <img id="bl2" src="assets/img/like/reactions-off.png" alt="like">
+                <figcaption>
+                    <b id="counter_like">1</b>
+                </figcaption>
+            </figure>
+            <p><a onclick="draw();">Нравится</a></p>
+        </div>
+
+    </section>
+</article>
+<aside>
+    <div class="sidebar">
+        <h2>Вход</h2>
+        <form id="form_auth" onsubmit="return false" id="login">
+
+        </form>
+    </div>
+
+
+    <ul>
+        <div style="background-color: #f9f9fb; text-align: center; padding-bottom: 20px">
+            <h2>ВИДОСИКИ</h2>
+        </div>
+
+
+        <li class="item-video-index">
+            <div class="text_under_image">
+                <p>IPHONE 14</p>
+                <p>Год выхода: 2022 г.</p>
+            </div>
+            <img class="item-video-index__image" src="https://images.biggeek.ru/blog/preview_iPHONE14PRO" alt="Это — iPhone 14. НЕ ПОКУПАЙ его">
+
+            <h3 class="item-video-index__title">
+                <a class="item-video-index__link" href="https://www.youtube.com/embed/_kvODN6tVv8?autoplay=1">iPhone 14 Pro на бумаге и в жизни. Самый подробный обзор!</a>
+            </h3>
+        </li>
+
+        <li class="video-index__item item-video-index">
+            <div class="text_under_image">
+                <p>IPHONE 14</p>
+                <p>Год выхода: 2022 г.</p>
+            </div>
+            <img class="item-video-index__image" src="https://images.biggeek.ru/blog/preview_iPHONE14REVIEW2" alt="Это — iPhone 14. НЕ ПОКУПАЙ его">
+
+            <h3 class="item-video-index__title">
+                <a class="item-video-index__link" href="https://www.youtube.com/embed/GUNYD1l7z4M?autoplay=1">Это — iPhone 14. НЕ ПОКУПАЙ его</a>
+            </h3>
+        </li>
+    </ul>
+</aside>
