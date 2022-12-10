@@ -1,54 +1,61 @@
-body
-{
-    background-image: url('./back.jpg');
-    background-repeat: no-repeat;
-
+body {
     color: #555;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     font-size: 15px;
 }
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
 a {
     border-bottom: 1px solid;
 }
+
 a:hover {
     border: 0;
     text-decoration: none;
 }
+
 header:after {
     bottom: 0;
     content: '';
     display: block;
+
     left: 0;
     opacity: .075;
     position: absolute;
+
     right: 0;
     top: 0;
     z-index: -1;
 }
+
 .headerText {
     box-sizing: border-box;
-    left: 50%;
-    moz-transform: translate(-50%,-50%);
-    ms-transform: translate(-50%,-50%);
-    o-transform: translate(-50%,-50%);
+    top: 5%;
+
     padding: 0 10px;
     position: absolute;
     text-align: center;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    webkit-transform: translate(-50%,-50%);
+
     width: 100%;
     word-wrap: break-word;
 }
+
 .headerText strong{
     display: block;
     font-size: 23px;
     line-height: 1;
     text-transform: uppercase;
 }
-.headerIp {
-    text-transform: uppercase;
-}
+
 .together {
     border-collapse: separate;
     display: table;
@@ -74,6 +81,7 @@ header:after {
     padding-right: 30px;
     white-space: nowrap;
 }
+
 .mySelect {
     border: 1px solid #fff;
     box-sizing: border-box;
@@ -87,8 +95,8 @@ header:after {
     webkit-transition: all 100ms linear;
     width: 100%;
 }
-.mySelect.err
-{
+
+.mySelect.err {
     border-color: #ff695e;
 }
 .mySelect:hover,.mySelect.sel
