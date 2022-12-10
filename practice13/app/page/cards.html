@@ -1,0 +1,155 @@
+<!-- CONTENT -->
+<section>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Я карточка </h2>
+                <p>Это карточка 1</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Я карточка </h2>
+                <p>Это карточка 2</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h2>Я карточка</h2>
+                <p>Это карточка 3</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="glassmorphism">
+        <div class="glassmorphism_box">
+
+            <div class="fly1"></div>
+            <div class="fly2"></div>
+
+            <div class="glassmorphism_content">
+                <h2>Авторизация</h2>
+                <input type="text" placeholder="Логин"><br>
+                <input type="password" placeholder="Пароль"><br>
+                <div class="containerCaptcha">
+                    <input id="enterCaptcha" type="text" placeholder="Enter captcha">
+                    <button id="refresh" onclick="refreshCanvas();"><img src="https://cdn-icons-png.flaticon.com/128/1549/1549456.png"></button>
+                    <canvas id="captchaCanvas" height=40 width="150"></canvas>
+                </div>
+                <a id="submitCaptcha" onclick="onSubmitCaptcha();">Войти</a>
+                <p>Забыли пароль?</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bl">
+    <center>
+        <div id="groupCart">
+            <div id="shopCart" class="shoppingCart" onclick="">
+                <img src="https://cdn-icons-png.flaticon.com/128/2438/2438136.png">
+                <span></span>
+            </div>
+
+            <div class="shoppingCart" onclick="">
+                <img src="https://cdn-icons-png.flaticon.com/128/5976/5976474.png">
+                <span></span>
+            </div>
+        </div>
+    </center>
+    <div class="container1">
+        <div class="box1">
+            <span></span>
+            <div class="content1" draggable="true">
+                <h2>Iphone 12</h2>
+                <p>110 К</p>
+                <center>
+                    <button onclick="addToCart()">+</button>
+                </center>
+            </div>
+        </div>
+        <div class="box1" draggable="true">
+            <span></span>
+            <div class="content1" draggable="true">
+                <h2>Iphone 11</h2>
+                <p>140 К</p>
+                <center>
+                    <button onclick="addToCart()">+</button>
+                </center>
+            </div>
+        </div>
+        <div class="box1">
+            <span></span>
+            <div class="content1" draggable="true">
+                <h2>Iphone 14</h2>
+                <p>300 К</p>
+                <center>
+                    <button onclick="addToCart()">+</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <center>
+        <div class="create-list">
+            <h4>Список товаров</h4>
+            <!-- тут будет список товаров -->
+        </div>
+    </center>
+</section>
+
+<section class="center-picture">
+
+    <div id="slider" class="slider">
+        <div class="thumb"></div>
+    </div>
+
+    <div class="area">
+        <img src="assets/img/creeper.png" alt="chicken" width="100px" height="100px">
+    </div>
+
+    <div class="where-click">
+        <p>Координаты клика:</p>
+        <p class="clickX">x = <span>-</span> px</p>
+        <p class="clickY">y = <span>-</span> px</p>
+    </div>
+
+</section>
+
+<section>
+    <div class="fifth">
+        <div class="shop">
+            <div class="item"><img
+                    src="https://cdn-files.kimovil.com/phone_front/0007/75/thumb_674950_phone_front_big.jpg">
+                <span>Iphone 14 PRO MAX</span>
+                <span class="cost">999$</span>
+            </div>
+            <div class="item"><img
+                    src="https://cdn-files.kimovil.com/phone_front/0007/75/thumb_674950_phone_front_big.jpg">
+                <span>Iphone 14</span>
+                <span class="cost">900$</span>
+            </div>
+            <div class="item"><img
+                    src="https://cdn-files.kimovil.com/phone_front/0007/75/thumb_674950_phone_front_big.jpg">
+                <span>Iphone 13 PRO</span>
+                <span class="cost">800$</span>
+            </div>
+        </div>
+        <div id="kart" class="kart" onmouseover="placeable = true" onmouseout="placeable = false">
+            <span id="totalCost" class="totalCost">0</span>
+        </div>
+    </div>
+</section>

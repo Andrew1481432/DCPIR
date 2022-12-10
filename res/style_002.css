@@ -2,6 +2,8 @@ body {
     color: #555;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     font-size: 15px;
+
+    overflow-x: hidden;
 }
 
 #bg {
